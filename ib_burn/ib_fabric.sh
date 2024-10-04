@@ -11,7 +11,7 @@ IB_SWITCH_LINK="./ib_switch.link"
 
 cd $(dirname "$SOURCE")
 
-echo > "$IB_SERVER_LIST"
+rm "$IB_SERVER_LIST"
 
 function read_config {
     jq --raw-output --arg ARG "${2:-}" "$1" "$CONFIG"
